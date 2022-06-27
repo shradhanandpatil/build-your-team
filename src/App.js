@@ -1,14 +1,12 @@
 import React from "react";
-import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
+import ContactUs from "./Components/ContactUs";
 import Technologies from "./Components/Technologies";
 
 function App() {
   return (
     <>
-    <Home/>
-    <Navbar/>
-    <Technologies/>
+      <Technologies/>
+      <ContactUs/>
     </>
   );
 }

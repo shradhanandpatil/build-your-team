@@ -1,13 +1,13 @@
 import React from 'react'
 import "../CSS/style.css"
+import NimapLogo from "../img/nimapLogo (1).png"
 
 export default function Navbar() {
   return (
     <>
       <div className="navbar">
         <div className="logo">
-            <img src="" alt="" srcset="" />
-            <p> NIMAP INFOTECH</p>
+            <img src={NimapLogo} alt="" />
         </div>
         <div className="link-container">
             <ul className='link'>
