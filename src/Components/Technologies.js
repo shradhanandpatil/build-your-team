@@ -18,9 +18,10 @@ export default function Technologies() {
   };
 
   return (
-    <>{
-      form ?'' : <Home/>
-    }
+    <>
+           {
+             form ? '':<Home/>
+          }  
          {isOpen && <GetQuote 
             closeModal={closeModal}
             form={form}

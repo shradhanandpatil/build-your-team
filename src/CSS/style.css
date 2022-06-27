@@ -188,12 +188,10 @@ a{
     position: relative;
 }
 
-.background-container img{
-    height: 100vh;
-    filter: blur(8px);
+.home{
+    filter: blur(8px);  
     -webkit-filter: blur(3px); 
     backdrop-filter: blur(100px);
-    background-image: linear-gradient(to right, rgb(41, 43, 44), rgb(114, 113, 116));
 }
 
 .form-container{

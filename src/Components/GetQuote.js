@@ -2,10 +2,9 @@ import React from 'react'
 import { Form, Formik , Field} from 'formik'
 import * as Yup from 'yup'
 import "../CSS/style.css"
-import img from "../img/background.png"
+import Home from './Home'
 
 function GetQuote({ closeModal}) {
-  
   const initialValues={
     number:'',
     email:'',
@@ -30,7 +29,9 @@ function GetQuote({ closeModal}) {
   return (
     <>
     <div className='background-container'>
-        <img src={img} alt="" srcset="" />
+      <div className='home'>
+        <Home/>
+      </div>
       <div className="form-container">
       <Formik
           initialValues={initialValues}
