@@ -91,7 +91,7 @@ a{
     padding: 2rem;
 }
 
-.logo img{
+.nimap-logo img{
     margin-left: 4rem;
     width: 15rem;
 }
@@ -124,7 +124,7 @@ a{
     margin-left: 4rem;
 }
 
-.md-btn button{
+.md-btn a{
     display: inline-block;
     padding: 1.4rem 2.5rem;
     text-decoration: none;
@@ -137,6 +137,71 @@ a{
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-right: 4rem;
+}
+
+.teachnologies{
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: 2rem;
+}
+
+.teachnologies h2{
+    color: rgba(48, 46, 46, 0.966);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+.backend-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.backend-box{
+    border: 2px solid rgba(12, 130, 240);
+    width: 48%;
+    height: 14rem;
+    border-radius: 10px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.text-container{
+    color: rgba(48, 46, 46, 0.966);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.text-container h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.add-remove{
+    margin: 3.5rem;
+    font-size: 1.5rem;
+    color: rgba(12, 130, 240);
+}
+
+.count{
+    margin: 2rem;
+    color: black;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+
+/* ########################## logo ################################## */
+
+.logo img{
+    margin: 2rem;
+    width: 8rem;
 }
 
 /* ########################## Contact Footer ############################ */
@@ -264,3 +329,11 @@ a{
     font-size: 1.7rem;
     font-weight: 600;
 }
+
+/* ##################### Media ############################# */
+
+@media screen and (max-width: 400px) {
+    .container{
+        font-size: 1rem;
+    }
+  }

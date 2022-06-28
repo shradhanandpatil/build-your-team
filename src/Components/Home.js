@@ -12,7 +12,7 @@ export default function Home() {
                 <h1>Build Your Digital Transformation Project Team Using <span className='main-span'>TaaS</span> </h1>
             </div>
             <div>
-                <button className='main-btn grad'>Get Started</button>
+                <a href='#select' className='main-btn grad'>Get Started</a>
             </div>
          </div>
       </div>

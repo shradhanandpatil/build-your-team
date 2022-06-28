@@ -1,12 +1,18 @@
 import React from "react";
-import ContactUs from "./Components/ContactUs";
 import Technologies from "./Components/Technologies";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
     <>
+    <Router>
       <Technologies/>
-      <ContactUs/>
+      <Routes>
+        <Route path="/contacus" element={ContactUs}>
+        </Route>
+      </Routes>
+    </Router>
     </>
   );
 }

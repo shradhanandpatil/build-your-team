@@ -17,5 +17,20 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="https://kit.fontawesome.com/861ab37914.js" crossorigin="anonymous"></script>
+    <script>
+      (document).ready(function(){
+        ("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            ('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+      </script>
   </body>
 </html>

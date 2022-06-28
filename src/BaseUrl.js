@@ -1,0 +1,1 @@
+export const BasUrl="https://4fb7-27-56-148-103.in.ngrok.io/api"

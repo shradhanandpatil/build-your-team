@@ -4,7 +4,7 @@ import '../CSS/style.css'
 export default function ContactFooter() {
   return (
     <>
-    <div className="footer grad">
+    <div className="footer grad" id='contactUs'>
             <div className="footer-container">
                 <div className="mumbai-container box">
                     <h2>CONTACT</h2>

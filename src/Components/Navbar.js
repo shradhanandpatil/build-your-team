@@ -6,13 +6,13 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar">
-        <div className="logo">
+        <div className="nimap-logo">
             <img src={NimapLogo} alt="" />
         </div>
         <div className="link-container">
             <ul className='link'>
-                <li className='link1'><a href="/">About Nimap</a></li>
-                <li className='link2'><a href="/">Contact Us</a></li>
+                <li className='link1'><a href="https://nimapinfotech.com/about-us/" target='_b'>About Nimap</a></li>
+                <li className='link2'><a href="#contactUs">Contact Us</a></li>
             </ul>
         </div>
       </div>
