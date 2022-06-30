@@ -1,1 +1,1 @@
-export const BasUrl="https://4fb7-27-56-148-103.in.ngrok.io/api"
+export const BaseUrl="http://95.111.230.3:3001/api/devstack/Email"

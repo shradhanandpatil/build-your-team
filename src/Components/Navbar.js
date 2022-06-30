@@ -1,13 +1,14 @@
 import React from 'react'
 import "../CSS/style.css"
 import NimapLogo from "../img/nimapLogo (1).png"
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" id='nav2'>
         <div className="nimap-logo">
-            <img src={NimapLogo} alt="" />
+           <NavLink to='/'><img src={NimapLogo} alt="NImapLogo"/></NavLink> 
         </div>
         <div className="link-container">
             <ul className='link'>

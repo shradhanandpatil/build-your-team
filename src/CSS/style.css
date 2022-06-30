@@ -105,9 +105,7 @@ a{
 .link1{
     margin-right: 4rem; 
 }
-.link2{
-    margin-right: 4rem;
-}
+
 
 /* ######################### Technologies ######################### */
 
@@ -124,7 +122,7 @@ a{
     margin-left: 4rem;
 }
 
-.md-btn a{
+.md-btn button{
     display: inline-block;
     padding: 1.4rem 2.5rem;
     text-decoration: none;
@@ -196,6 +194,14 @@ a{
     font-size: 2.5rem;
 }
 
+.reset{
+    font-size: 1.5rem;
+    border: none;
+    color: rgba(12, 130, 240);
+    background-color: white;
+    margin: 3rem;
+    font-weight: 600;
+}
 
 /* ########################## logo ################################## */
 
@@ -332,8 +338,196 @@ a{
 
 /* ##################### Media ############################# */
 
-@media screen and (max-width: 400px) {
-    .container{
+@media (max-width: 550px){
+    
+    .navbar{
+        padding: 0.5rem;
+    }
+
+    .nimap-logo img{
+        width: 8rem;
+        margin-left: 2rem;
+    }
+
+    .number  {
+        width: 75%;
+    }
+
+    .country-code{
+        width: 22%;
+        padding: 1rem 0.5rem;
+    }
+
+    .form-btn {
+        margin-top: 2rem;
+        margin-left: 2.5rem;
+    }
+    .link a{
         font-size: 1rem;
     }
-  }
+
+    .link2{
+        margin-left: 0px;
+    }
+
+    .nimap-logo{
+        width: 10rem;
+    }
+    .main-container{
+        font-size: 1rem;
+        width: 60%;
+        margin-top: 1.5rem;
+    }
+    .main-btn{
+        padding: 0.5em 1em;
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .main-heading h1{
+        font-size: 1rem;
+    }
+    .container{
+        height: 32vh;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .md-heading h2{
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    .reset{
+        font-size: 1rem;
+    }
+    .md-btn{
+        display: flex;
+        height: 5rem;
+        align-items: center;
+    }
+    .md-btn button{
+       font-size: 1rem;
+       margin-right: 0px;
+       padding: 0.8rem 1.5rem;
+    }
+
+    .backend-box{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .tech-container{
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        padding: 5px;
+    }
+    
+    .teachnologies{
+        width: 100%;
+        margin: 1px;
+    }
+
+    .teachnologies h2{
+        margin: 10px;
+    }
+    
+    .text-heading h1{
+        font-size: 1.5rem;
+        margin-left: 0px;
+    }
+
+    .text-container{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .text-container span{
+        font-size: 1.5rem;
+    }
+
+    .add-remove{
+        width: 50%;
+        margin-right: 1rem;
+    }
+
+    .logo img{
+        padding: 0px;
+        width: 7rem;
+        margin: 1.5rem;
+    }
+
+    .footer-container{
+        display: block;
+    }
+    .box{
+        margin: 1rem;
+    }
+
+    .form-container{
+        width: 70%;
+        height: 70%;
+        position: relative;
+        top: 0%;
+    }
+    .form{
+        height: 100%;
+    }
+
+    .contact-page{
+        height: 24vh;
+        padding-top: 2.5rem;
+    }
+
+    .contact-page h1{
+        font-size: 1.5rem;
+    }
+    .contact-page h2{
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 551px) and (max-width: 1000px){
+    .container{
+        height: 50vh;
+    }
+    .main-heading h1{
+        font-size: 2rem;
+    }
+    .tech-container{
+        margin-top: -3rem;
+    }
+
+    .tech-container h1{
+        font-size: 2.2rem;
+    }
+    .md-heading h2{
+        margin-left: 2rem;
+    }
+
+    .teachnologies h2{
+        margin-left: -2rem;
+        font-size: 3rem;
+        align-items: center;
+    }
+
+    .backend-container{
+        display: block;
+    }
+    .backend-box{
+        width: 86%;
+    }
+    .form-container{
+        width: 45%;
+        height: auto;
+    }
+    .link2{
+        margin-right: 2rem;
+    }
+
+    .contact-page{
+        height: 65vh;
+        padding-top: 20.5rem;
+    }
+}
+

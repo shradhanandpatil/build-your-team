@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactFooter from "./ContactFooter";
 import GetQuote from "./GetQuote";
 import Home from "./Home";
@@ -50,12 +50,76 @@ export default function Technologies() {
   const [form, setForm] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const handelReset=()=>{
+    setJava(0);
+    setPython(0);
+    setDotNet(0);
+    setGolang(0);
+    setNode(0);
+    setNode(0);
+    setPhp(0);
+    setReactJs(0);
+    setAngular(0);
+    setHtml(0);
+    setVue(0);
+    setWordpress(0);
+    setAndroid(0);
+    setIos(0);
+    setIonic(0);
+    setFlutter(0);
+    setReactNavtive(0);
+    setDatabase(0)
+    setBa(0);
+    setQa(0);
+    setQaAuto(0);
+    setDev(0);
+    setUi(0);
+  }
 
+  const getState=()=>{
+    const allState={
+       'Java':Java,
+      'Python':Python,
+      'DoteNet':DotNet,
+      'Golang':Golang,
+      'Node':Node,
+      'PHP':Php,
+      'React Js':ReactJs,
+      'Angular':Angular,
+      'Html':Html,
+      'Vue Js':Vue,
+      'Wordpress':Wordpress,
+      'Android':Android,
+      'iOS':Ios,
+      'Ionic':Ionic,
+      'Flutter':Flutter,
+      'React Native':ReactNative,
+      'UI/UX':Ui,
+      'Data Base':Database,
+      'QA':Qa,
+      'BA':Ba,
+      'QA Auto':QaAuto,
+      'Dev':Dev}
+
+     var sendState=[];
+
+      for(let selectState in allState){
+        if(allState[selectState] > 0){
+          sendState.push(selectState,allState[selectState]);
+        }
+      }
+      return sendState;
+  }
+  useEffect(()=>{
+   getState(); 
+  })
+const data=getState();
 
   const openModal = (e) => {
     e.preventDefault();
     setIsOpen(true);
     setForm(true);
+    window.scrollTo(0,0)
   };
 
   const closeModal = () => {
@@ -67,16 +131,19 @@ export default function Technologies() {
     <>
       {form ? "" : <Home />}
       {isOpen && (
-        <GetQuote closeModal={closeModal} form={form} isOpen={isOpen} />
+        <GetQuote closeModal={closeModal} form={form} isOpen={isOpen} data={data} />
       )}
       <div className="tech-container" id="select">
         <div className="md-heading">
           <h2>Select Technologies</h2>
         </div>
         <div className="md-btn">
-          <a href="#navbar" className="grad" onClick={openModal} >
-            Get Quote
+          <a href="#nav" className="reset" onClick={handelReset}>
+            Reset
           </a>
+          <button className="grad" onClick={openModal} >
+                Get Quote
+          </button>
         </div>
       </div>
       <div className="teachnologies">
@@ -96,7 +163,7 @@ export default function Technologies() {
                 }}>
                   <i className="fa-solid fa-minus"></i>
                 </span>
-                <span className="count"> {Java} </span>
+                <span className="count">{Java}</span>
                 <span onClick={function handelJavaAdd(){
                   return setJava(Java + 1);
                 }}>
@@ -241,7 +308,7 @@ export default function Technologies() {
                 </span>
                 <span className="count"> {ReactJs} </span>
                 <span onClick={function handelReactAdd(){
-                  return setReactJs(React + 1);
+                  return setReactJs(ReactJs + 1);
                 }}>
                   <i className="fa-solid fa-plus"></i>
                 </span>
@@ -447,7 +514,7 @@ export default function Technologies() {
               </div>
               <div className="add-remove">
                 <span onClick={function handelReactNativeRemove(){
-                  return setReactNavtive(ReactNative - 1);
+                  return ReactNative > 0 ? setReactNavtive(ReactNative - 1) : '';
                 }}>
                   <i className="fa-solid fa-minus"></i>
                 </span>
@@ -596,7 +663,7 @@ export default function Technologies() {
                 </span>
                 <span className="count"> {Dev} </span>
                 <span onClick={function handelQaAutoAdd(){
-                  return setQaAuto(QaAuto + 1);
+                  return setDev(Dev + 1);
                 }}>
                   <i className="fa-solid fa-plus"></i>
                 </span>
@@ -609,3 +676,4 @@ export default function Technologies() {
     </>
   );
 }
+

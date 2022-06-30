@@ -4,22 +4,32 @@ import * as Yup from 'yup'
 import "../CSS/style.css"
 import Home from './Home'
 import axios from 'axios'
-import { BasUrl } from '../BaseUrl'
+import { BaseUrl } from '../BaseUrl'
+import { useNavigate } from 'react-router-dom'
 
-function GetQuote({ closeModal}) {
-    const handelPost= async(value,e)=>{
-      e.preventDefault();
+function GetQuote({ closeModal ,data}) {
+  const navigate= useNavigate();
+  const newData=data
+  const stack=[];
+  for(let i=0; i< newData.length;i++){
+    stack.push(`${newData[i]}:${newData[i+1]}`);
+    i+=1;
+  }
+  const newText=stack.join('|');
+
+    const handelPost= async(value,newText)=>{
       try{
        const data={
         "email": `${value.email}`,
-        "stack": `React:5|Java:5`
+        "stack": `${newText}`
         }
-      const res=await axios.post({BasUrl},data);
+      const res=await axios.post(`${BaseUrl}`,data);
       console.log(res);
     }catch(err){
       console.log(err);
-    }}
-  
+    }
+    navigate('/contactus');
+}
   const initialValues={
     number:'',
     email:'',
@@ -53,7 +63,7 @@ function GetQuote({ closeModal}) {
           validationSchema={validation}
 
           onSubmit={
-            value => handelPost( value)
+            value => handelPost( value,newText)
           }
         >
         {({ errors, touched }) => (
@@ -69,7 +79,6 @@ function GetQuote({ closeModal}) {
                   ) : null}
                   
                   <Field className='input' name="email" placeholder='Enter your email' type="email" />
-                 {/* { console.log('sssssssssss',email) } */}
                   {errors.email && touched.email ? <div className='error'>{errors.email}</div> : null} 
 
                   <Field className='input' name="name" placeholder='Enter Name ' type='text' />
