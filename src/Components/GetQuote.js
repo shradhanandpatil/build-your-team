@@ -6,7 +6,7 @@ import Home from './Home'
 import axios from 'axios'
 import { BaseUrl } from '../BaseUrl'
 import { useNavigate } from 'react-router-dom'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast , ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function GetQuote({ closeModal ,data}) {
@@ -23,7 +23,7 @@ function GetQuote({ closeModal ,data}) {
       console.log("hadnelPost");
       try{
         if(newText===""){
-          toast.error(' Please Select Technologies', {
+          toast.error('Please Select Technologies', {
             position: "top-right",
             autoClose: 700,
             hideProgressBar: false,
@@ -59,7 +59,7 @@ function GetQuote({ closeModal ,data}) {
 
     const validation=Yup.object({
       number: Yup.string()
-      .max(10,'Mobile number should be 10 digits only')
+      .typeError("Please Enter Valid Contact Number")
       .matches(/^[0-9]{10}$/, 'Invalid mobile number')
       .required('Mobile number is required'), 
 
@@ -94,11 +94,10 @@ function GetQuote({ closeModal ,data}) {
                     <button className='close' onClick={closeModal}><i className="fa-solid fa-xmark"></i></button>
                 </div>
                   <Field type='text' name='code' placeholder="+91" value="+91" className="input country-code"/>
-                  <Field className='input number' name="number" placeholder='Mobile Number' type='number'/>
+                  <Field className='input number' name="number" maxLength={10} placeholder='Mobile Number' type='text'/>
                   {errors.number && touched.number ? (
                     <div className='error'>{errors.number}</div>
                   ) : null}
-                  
                   <Field className='input' name="email" placeholder='Enter your email' type="email" />
                   {errors.email && touched.email ? <div className='error'>{errors.email}</div> : null} 
 

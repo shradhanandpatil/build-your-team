@@ -540,3 +540,20 @@ a{
     }
 }
 
+@media(min-width: 1001px){
+    .backend-box{
+        width: 47%;
+    }
+
+    .text-container{
+        padding: 0.5rem;
+    }
+
+    .text-container h1{
+        width: 2rem;
+    }
+    .form-container{
+        width: 38%;
+    }
+} 
+
