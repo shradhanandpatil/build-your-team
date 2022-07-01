@@ -553,7 +553,13 @@ a{
         width: 2rem;
     }
     .form-container{
-        width: 38%;
+        width: 35%;
     }
 } 
+
+@media(min-width: 1200px){
+    .form-container{
+        width: 27%;
+    }
+}
 

@@ -42,7 +42,9 @@ function GetQuote({ closeModal ,data}) {
             });
        const data={
         "email": `${value.email}`,
-        "stack": `${newText}`
+        "stack": `${newText}`,
+        "phoneNo":`${value.number}`,
+        "name":`${value.name}`
         }
       await axios.post(`${BaseUrl}`,data);
       localStorage.setItem('done',true);
@@ -101,7 +103,7 @@ function GetQuote({ closeModal ,data}) {
                   <Field className='input' name="email" placeholder='Enter your email' type="email" />
                   {errors.email && touched.email ? <div className='error'>{errors.email}</div> : null} 
 
-                  <Field className='input' name="name" placeholder='Enter Name ' type='text' />
+                  <Field className='input' name="name" placeholder='Enter full name  ' type='text' />
                   {errors.name && touched.name ? (
                     <div className='error'>{errors.name}</div>
                   ) : null}
