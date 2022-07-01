@@ -6,6 +6,8 @@ import Home from './Home'
 import axios from 'axios'
 import { BaseUrl } from '../BaseUrl'
 import { useNavigate } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function GetQuote({ closeModal ,data}) {
   const navigate= useNavigate();
@@ -18,17 +20,36 @@ function GetQuote({ closeModal ,data}) {
   const newText=stack.join('|');
 
     const handelPost= async(value,newText)=>{
+      console.log("hadnelPost");
       try{
+        if(newText===""){
+          toast.error(' Please Select Technologies', {
+            position: "top-right",
+            autoClose: 700,
+            hideProgressBar: false,
+            closeOnClick: true,
+            draggable: true,
+            progress: undefined,
+            });
+        }else{
+          toast.success('Submitted Successfully', {
+            position: "top-right",
+            autoClose: 700,
+            hideProgressBar: false,
+            closeOnClick: true,
+            draggable: true,
+            progress: undefined,
+            });
        const data={
         "email": `${value.email}`,
         "stack": `${newText}`
         }
-      const res=await axios.post(`${BaseUrl}`,data);
-      console.log(res);
-    }catch(err){
+      await axios.post(`${BaseUrl}`,data);
+      localStorage.setItem('done',true);
+      navigate('/contactus');
+    }}catch(err){
       console.log(err);
     }
-    navigate('/contactus');
 }
   const initialValues={
     number:'',
@@ -91,6 +112,7 @@ function GetQuote({ closeModal ,data}) {
       </Formik>
     </div>
   </div>
+  <ToastContainer/>
     </>
   )
 }
