@@ -115,11 +115,9 @@ export default function Technologies() {
   })
 const data=getState();
 
-  const openModal = (e) => {
-    e.preventDefault();
+  const openModal = () => {
     setIsOpen(true);
     setForm(true);
-    window.scrollTo(0,0)
   };
 
   const closeModal = () => {
@@ -138,12 +136,12 @@ const data=getState();
           <h2>Select Technologies</h2>
         </div>
         <div className="md-btn">
-          <a href="#nav" className="reset" onClick={handelReset}>
+          <button className="reset" onClick={handelReset}>
             Reset
-          </a>
-          <button className="grad" onClick={openModal} >
-                Get Quote
           </button>
+          <a href="#nav" className='grad' onClick={openModal}>
+              Get Quote
+          </a>
         </div>
       </div>
       <div className="teachnologies">

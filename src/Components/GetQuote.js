@@ -10,6 +10,7 @@ import { toast , ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function GetQuote({ closeModal ,data}) {
+
   const navigate= useNavigate();
   const newData=data
   const stack=[];
@@ -20,7 +21,6 @@ function GetQuote({ closeModal ,data}) {
   const newText=stack.join('|');
 
     const handelPost= async(value,newText)=>{
-      console.log("hadnelPost");
       try{
         if(newText===""){
           toast.error('Please Select Technologies', {
@@ -76,7 +76,7 @@ function GetQuote({ closeModal ,data}) {
     
   return (
     <>
-    <div className='background-container' id='navbar'>
+    <div className='background-container' >
       <div className='home'>
         <Home/>
       </div>

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 export default function Navbar() {
   return (
     <>
-      <div className="navbar" id='nav2'>
+      <div className="navbar" id="nav">
         <div className="nimap-logo">
            <NavLink to='/'><img src={NimapLogo} alt="NImapLogo"/></NavLink> 
         </div>

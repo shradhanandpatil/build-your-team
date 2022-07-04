@@ -42,8 +42,8 @@ a{
 .container{
     height: 97vh;
     background-image: url('../img/Vector\ Image.svg');
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: bottom;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -53,7 +53,7 @@ a{
 .main-container{
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 37%;
     transform: translate(-50%,-50%);
     padding: 1rem;
     font-size: 1.8rem;
@@ -122,7 +122,7 @@ a{
     margin-left: 4rem;
 }
 
-.md-btn button{
+.md-btn a{
     display: inline-block;
     padding: 1.4rem 2.5rem;
     text-decoration: none;
@@ -136,6 +136,7 @@ a{
     margin-top: 1rem;
     margin-right: 4rem;
 }
+
 
 .teachnologies{
     margin-left: 6rem;
@@ -350,7 +351,7 @@ a{
 @media (max-width: 550px){
     
     .navbar{
-        padding: 0.5rem;
+        padding: 0rem;
     }
 
     .nimap-logo img{
@@ -359,17 +360,17 @@ a{
     }
 
     .number  {
-        width: 75%;
+        width: 81%;
     }
 
     .country-code{
-        width: 22%;
+        width: 16%;
         padding: 1rem 0.5rem;
     }
 
     .form-btn {
         margin-top: 2rem;
-        margin-left: 2.5rem;
+        margin-left: 5.5rem;
     }
     .link a{
         font-size: 1rem;
@@ -384,12 +385,12 @@ a{
     }
     .main-container{
         font-size: 1rem;
-        width: 60%;
+        width: 61%;
         margin-top: 1.5rem;
     }
     .main-btn{
         padding: 0.5em 1em;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         font-size: 1rem;
         font-weight: 400;
     }
@@ -397,8 +398,9 @@ a{
         font-size: 1rem;
     }
     .container{
-        height: 32vh;
+        height: 28vh;
         background-position: center;
+        background-repeat: no-repeat;
         background-size: contain;
     }
 
@@ -474,10 +476,9 @@ a{
     }
 
     .form-container{
-        width: 70%;
-        height: 70%;
+        width: 87%;
+        height: auto;
         position: relative;
-        top: 0%;
     }
     .form{
         height: 100%;
@@ -499,12 +500,15 @@ a{
 @media(min-width: 551px) and (max-width: 1000px){
     .container{
         height: 50vh;
+        background-position: center;
+        background-size: contain;
     }
     .main-heading h1{
         font-size: 2rem;
     }
     .tech-container{
-        margin-top: -3rem;
+        margin-top: -5rem;
+        padding: 1.5rem;
     }
 
     .tech-container h1{
@@ -537,6 +541,10 @@ a{
     .contact-page{
         height: 65vh;
         padding-top: 20.5rem;
+    }
+
+    .md-btn button{
+        margin-right: 1rem;
     }
 }
 
