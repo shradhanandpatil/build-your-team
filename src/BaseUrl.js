@@ -1,1 +1,0 @@
-export const BaseUrl="http://95.111.230.3:3001/api/DevStack/Email"

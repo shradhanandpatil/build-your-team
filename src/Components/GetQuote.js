@@ -4,7 +4,6 @@ import * as Yup from 'yup'
 import "../CSS/style.css"
 import Home from './Home'
 import axios from 'axios'
-import { BaseUrl } from '../BaseUrl'
 import { useNavigate } from 'react-router-dom'
 import { toast , ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -32,6 +31,7 @@ function GetQuote({ closeModal ,data}) {
             progress: undefined,
             });
         }else{
+          console.log("API");
           toast.success('Submitted Successfully', {
             position: "top-right",
             autoClose: 700,
@@ -46,7 +46,7 @@ function GetQuote({ closeModal ,data}) {
         "phoneNo":`${value.number}`,
         "name":`${value.name}`
         }
-      await axios.post(`${BaseUrl}`,data);
+      await axios.post((process.env.REACT_APP_BASE_URL+'/DevStack/Email'),data);
       localStorage.setItem('done',true);
       navigate('/contactus');
     }}catch(err){

@@ -258,6 +258,7 @@ a{
 
 .background-container{
     position: relative;
+    height: 41vh;
 }
 
 .home{
@@ -347,8 +348,319 @@ a{
 }
 
 /* ##################### Media ############################# */
+@media (min-width: 100px) and (max-width: 299px){
 
-@media (max-width: 550px){
+    .navbar{
+        padding: 0rem;
+    }
+
+    .nimap-logo img{
+        width: 7rem;
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+    }
+
+    .number  {
+        width: 72%;
+    }
+
+    .country-code{
+        width: 23%;
+        padding: 1rem 0.5rem;
+    }
+
+    .form-btn {
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+    }
+
+    .link{
+        margin: 1rem;
+    }
+
+    .link1{
+        margin-right: 3rem;
+    }
+    .link a{
+        font-size: 1rem;
+    }
+
+    .link2{
+        margin-left: 0px;
+    }
+
+    .nimap-logo{
+        width: 10rem;
+    }
+    .main-container{
+        font-size: 1rem;
+        width: 68%;
+        margin-top: 1.5rem;
+    }
+    .main-btn{
+        padding: 0.5em 1em;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .main-heading h1{
+        font-size: 1rem;
+    }
+    .container{
+        height: 32vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .md-heading h2{
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    .reset{
+        font-size: 1rem;
+    }
+    .md-btn{
+        display: flex;
+        height: 5rem;
+        align-items: center;
+        width: 100%;
+    }
+    .md-btn a{
+       font-size: 1rem;
+       margin-right: 0px;
+       padding: 0.8rem 0.9rem;
+    }
+
+    .backend-box{
+        width: 100%;
+       height: 10rem;
+    }
+
+    .tech-container{
+        display: flex;
+        align-items: center;
+        margin-top: -23px;
+        padding: 5px;
+    }
+    
+    .teachnologies{
+        width: 100%;
+        margin: 1px;
+    }
+
+    .teachnologies h2{
+        margin: 10px;
+    }
+    
+    .text-heading h1{
+        font-size: 1.2rem;
+        margin-left: 0px;
+    }
+
+    .text-container{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .text-container span{
+        font-size: 1.5rem;
+    }
+
+    .add-remove{
+        width: 62%;
+        margin: 0px;
+    }
+
+    .logo img{
+        padding: 0px;
+        width: 6rem;
+        margin: 1.5rem;
+    }
+
+    .footer-container{
+        display: block;
+        padding: 1rem;
+    }
+    .box{
+        margin: 1rem;
+    }
+
+    .form-container{
+        width: 87%;
+        height: auto;
+        position: absolute;
+        top: auto;
+    }
+    .form{
+        height: 100%;
+    }
+
+    .contact-page{
+        height: 24vh;
+        padding-top: 2.5rem;
+    }
+
+    .contact-page h1{
+        font-size: 1.5rem;
+    }
+    .contact-page h2{
+        font-size: 1rem;
+    }
+    
+}
+
+@media (min-width: 300px) and (max-width: 499px){
+    .navbar{
+        padding: 0rem;
+    }
+
+    .nimap-logo img{
+        width: 8rem;
+        margin-left: 2rem;
+    }
+
+    .number  {
+        width: 81%;
+    }
+
+    .country-code{
+        width: 16%;
+        padding: 1rem 0.5rem;
+    }
+
+    .form-btn {
+        margin-top: 2rem;
+        margin-left: 5.5rem;
+    }
+    .link a{
+        font-size: 1rem;
+    }
+
+    .link1{
+        margin-right: 1rem;
+    }
+    .nimap-logo{
+        width: 10rem;
+    }
+    .main-container{
+        font-size: 1rem;
+        width: 55%;
+        margin-top: 1.5rem;
+    }
+    .main-btn{
+        padding: 0.5em 1em;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .main-heading h1{
+        font-size: 1rem;
+    }
+    .container{
+        height: 32vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .md-heading h2{
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    .reset{
+        font-size: 1rem;
+    }
+    .md-btn{
+        display: flex;
+        height: 5rem;
+        align-items: center;
+    }
+    .md-btn a{
+       font-size: 1rem;
+       margin-right: 0px;
+       padding: 0.8rem 0.9rem;
+    }
+
+    .backend-box{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .tech-container{
+        display: flex;
+        align-items: center;
+        margin-top: -9px;
+        padding: 5px;
+    }
+    
+    .teachnologies{
+        width: 100%;
+        margin: 1px;
+    }
+
+    .teachnologies h2{
+        margin: 10px;
+    }
+    
+    .text-heading h1{
+        font-size: 1.5rem;
+        margin-left: 0px;
+    }
+
+    .text-container{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .text-container span{
+        font-size: 1.5rem;
+    }
+
+    .add-remove{
+        width: 50%;
+        margin-right: 1rem;
+    }
+
+    .logo img{
+        padding: 0px;
+        width: 7rem;
+        margin: 1.5rem;
+    }
+
+    .footer-container{
+        display: block;
+    }
+    .box{
+        margin: 1rem;
+    }
+
+    .form-container{
+        width: 87%;
+        height: auto;
+        position: absolute;
+        top: auto;
+    }
+    .form{
+        height: 100%;
+    }
+
+    .contact-page{
+        height: 24vh;
+        padding-top: 2.5rem;
+    }
+
+    .contact-page h1{
+        font-size: 1.5rem;
+    }
+    .contact-page h2{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (min-width: 500px) and (max-width: 550px){
     
     .navbar{
         padding: 0rem;
@@ -385,8 +697,8 @@ a{
     }
     .main-container{
         font-size: 1rem;
-        width: 61%;
-        margin-top: 1.5rem;
+        width: 42%;
+        margin-top: 0.5rem;
     }
     .main-btn{
         padding: 0.5em 1em;
@@ -398,10 +710,10 @@ a{
         font-size: 1rem;
     }
     .container{
-        height: 28vh;
-        background-position: center;
+        height: 36vh;
+        background-position: bottom;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
     }
 
     .md-heading h2{
@@ -416,7 +728,7 @@ a{
         height: 5rem;
         align-items: center;
     }
-    .md-btn button{
+    .md-btn a{
        font-size: 1rem;
        margin-right: 0px;
        padding: 0.8rem 1.5rem;
@@ -476,9 +788,10 @@ a{
     }
 
     .form-container{
-        width: 87%;
+        width: 55%;
         height: auto;
-        position: relative;
+        position: absolute;
+        top: 60%;
     }
     .form{
         height: 100%;
@@ -499,7 +812,7 @@ a{
 
 @media(min-width: 551px) and (max-width: 1000px){
     .container{
-        height: 50vh;
+        height: 43vh;
         background-position: center;
         background-size: contain;
     }
@@ -507,7 +820,7 @@ a{
         font-size: 2rem;
     }
     .tech-container{
-        margin-top: -5rem;
+        margin-top: 1rem;
         padding: 1.5rem;
     }
 
@@ -543,8 +856,12 @@ a{
         padding-top: 20.5rem;
     }
 
-    .md-btn button{
+    .md-btn a{
         margin-right: 1rem;
+    }
+
+    .main-container{
+        margin-top: 2rem;
     }
 }
 
@@ -558,10 +875,17 @@ a{
     }
 
     .text-container h1{
-        width: 2rem;
+        width: 100%;
     }
     .form-container{
         width: 35%;
+        position: fixed;
+    }
+
+    .container{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 } 
 
@@ -569,5 +893,21 @@ a{
     .form-container{
         width: 27%;
     }
+
+    .container{
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .background-container{
+        position: relative;
+        height: 41vh;
+    }
+
+    .form-container{
+        position: fixed;
+    }
+
 }
 

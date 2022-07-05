@@ -9,7 +9,7 @@ export default function Protected(props) {
         if(!auth){
             navigate('/');
         }
-    },[]);
+    });
   return (
     <>
         <Component/>
