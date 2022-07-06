@@ -670,6 +670,11 @@ const data=getState();
           </div>
         </div>
       </div>
+      <div style={{textAlign:'center', marginBottom:'2rem'}}>
+      <a href="#nav" className='main-btn grad' onClick={openModal}>
+              Get Quote
+      </a>
+      </div>
       <ContactFooter />
     </>
   );

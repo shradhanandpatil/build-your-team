@@ -80,7 +80,7 @@ a{
     color: white;
     font-weight: 500;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    margin: 2rem;
 }
 
 /* ###################### Navbar ############################ */
@@ -660,7 +660,7 @@ a{
 }
 
 
-@media (min-width: 500px) and (max-width: 550px){
+@media (min-width: 500px) and (max-width: 600px){
     
     .navbar{
         padding: 0rem;
@@ -810,7 +810,7 @@ a{
     }
 }
 
-@media(min-width: 551px) and (max-width: 1000px){
+ @media(min-width: 601px) and (max-width: 1000px){
     .container{
         height: 43vh;
         background-position: center;
@@ -863,7 +863,7 @@ a{
     .main-container{
         margin-top: 2rem;
     }
-}
+} 
 
 @media(min-width: 1001px){
     .backend-box{
