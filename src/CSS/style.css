@@ -6,7 +6,14 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
+.lazyLoading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    font-weight: 600;
+}
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -37,10 +44,11 @@ a{
     width: 1200px;
 }
 
+
 /* ############################# Home ############################ */
 
 .container{
-    height: 97vh;
+    height: 95vh;
     background-image: url("../img/Image.svg");
     background-size: cover;
     background-position: bottom;
@@ -48,16 +56,15 @@ a{
     position: relative;
 }
 
-
-
 .main-container{
     position: absolute;
     left: 50%;
     top: 37%;
     transform: translate(-50%,-50%);
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 1.8rem;
     text-align: center;
+    width: 50%;
 }
 
 .main-heading h1{
@@ -88,11 +95,10 @@ a{
 .navbar{
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    margin: 2rem 4rem;
 }
 
 .nimap-logo img{
-    margin-left: 4rem;
     width: 15rem;
 }
 
@@ -103,23 +109,25 @@ a{
 }
 
 .link1{
-    margin-right: 4rem; 
+    margin-right: 3rem;
 }
-
 
 /* ######################### Technologies ######################### */
 
 .tech-container{
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
     font-size: 2rem;
-    padding: 2rem;
+    margin: 2rem 4rem;
+    padding: 1rem;
+}
+
+.teachnologies i{
+    cursor: pointer;
 }
 
 .md-heading h2{
     color: rgba(48, 46, 46, 0.966);
-    margin-left: 4rem;
 }
 
 .md-btn a{
@@ -134,14 +142,11 @@ a{
     font-weight: 500;
     font-size: 1.5rem;
     margin-top: 1rem;
-    margin-right: 4rem;
 }
 
 
 .teachnologies{
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-bottom: 2rem;
+    margin: 2rem 4rem;
 }
 
 .teachnologies h2{
@@ -149,7 +154,7 @@ a{
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: 600;
-    margin-top: 1rem;
+    padding: 1rem;
 }
 
 
@@ -202,6 +207,7 @@ a{
     background-color: white;
     margin: 3rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 /* ########################## logo ################################## */
@@ -338,25 +344,17 @@ a{
     font-weight: 600;
 }
 
-.lazyLoading{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 2rem;
-    font-weight: 600;
-}
 
 /* ##################### Media ############################# */
 @media (min-width: 100px) and (max-width: 299px){
 
     .navbar{
-        padding: 0rem;
+        margin: 0.5rem;
     }
 
     .nimap-logo img{
-        width: 7rem;
-        margin-left: 2rem;
+        width: 6rem;
+        margin-left: 1rem;
         margin-top: 0.5rem;
     }
 
@@ -389,13 +387,11 @@ a{
         margin-left: 0px;
     }
 
-    .nimap-logo{
-        width: 10rem;
-    }
+
     .main-container{
-        font-size: 1rem;
-        width: 68%;
-        margin-top: 1.5rem;
+        font-size: 0.5rem;
+        width: 72%;
+        margin-top: 1rem;
     }
     .main-btn{
         padding: 0.5em 1em;
@@ -440,6 +436,7 @@ a{
     .tech-container{
         display: flex;
         align-items: center;
+        margin: 0px;
         margin-top: -23px;
         padding: 5px;
     }
@@ -451,6 +448,7 @@ a{
 
     .teachnologies h2{
         margin: 10px;
+        font-size: 1.5rem;
     }
     
     .text-heading h1{
@@ -512,7 +510,7 @@ a{
 
 @media (min-width: 300px) and (max-width: 499px){
     .navbar{
-        padding: 0rem;
+      margin: 0.5rem;
     }
 
     .nimap-logo img{
@@ -537,6 +535,9 @@ a{
         font-size: 1rem;
     }
 
+    .link{
+        margin: 2rem;
+    }
     .link1{
         margin-right: 1rem;
     }
@@ -545,8 +546,8 @@ a{
     }
     .main-container{
         font-size: 1rem;
-        width: 55%;
-        margin-top: 1.5rem;
+        width: 56%;
+        margin-top: 2.5rem;
     }
     .main-btn{
         padding: 0.5em 1em;
@@ -590,8 +591,7 @@ a{
     .tech-container{
         display: flex;
         align-items: center;
-        margin-top: -9px;
-        padding: 5px;
+        margin: -21px 0.2rem;
     }
     
     .teachnologies{
@@ -812,7 +812,7 @@ a{
 
  @media(min-width: 601px) and (max-width: 1000px){
     .container{
-        height: 43vh;
+        height: 45vh;
         background-position: center;
         background-size: contain;
     }
@@ -820,8 +820,7 @@ a{
         font-size: 2rem;
     }
     .tech-container{
-        margin-top: 1rem;
-        padding: 1.5rem;
+        margin: 0.5rem 0rem;
     }
 
     .tech-container h1{
@@ -866,9 +865,6 @@ a{
 } 
 
 @media(min-width: 1001px){
-    .backend-box{
-        width: 47%;
-    }
 
     .text-container{
         padding: 0.5rem;
@@ -876,16 +872,23 @@ a{
 
     .text-container h1{
         width: 100%;
+        font-size: 1.8rem;
     }
     .form-container{
         width: 35%;
         position: fixed;
     }
-
+    .backend-box{
+        width: 47%;
+    }
     .container{
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+    .add-remove{
+        width: 12rem;
+        margin: 1.5rem;
     }
 } 
 

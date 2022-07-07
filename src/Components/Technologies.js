@@ -4,7 +4,7 @@ import GetQuote from "./GetQuote";
 import Home from "./Home";
 import java from "../img/Java Icon.svg";
 import python from "../img/Python Icon.svg";
-import android from "../img/Android Icon.svg";
+import android from "../img/favicon-114x114.png";
 import angular from "../img/Angular Icon.svg";
 import ba from "../img/BA Icon.svg";
 import dev from "../img/Dev Ops Icon.svg";

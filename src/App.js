@@ -7,7 +7,7 @@ const Teachnologies = lazy(() => import("./Components/Technologies"));
 function App() {
   localStorage.clear();
   return (
-    <>
+    <div className="parent_conatiner">
       <Router>
         <Routes>
           <Route
@@ -34,7 +34,7 @@ function App() {
           />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
