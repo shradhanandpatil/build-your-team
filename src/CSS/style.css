@@ -41,7 +41,7 @@ a{
 
 .container{
     height: 97vh;
-    background-image: url('../img/Vector\ Image.svg');
+    background-image: url("../img/Image.svg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
