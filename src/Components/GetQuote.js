@@ -31,7 +31,6 @@ function GetQuote({ closeModal ,data}) {
             progress: undefined,
             });
         }else{
-          console.log("API");
           toast.success('Submitted Successfully', {
             position: "top-right",
             autoClose: 700,
