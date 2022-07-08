@@ -19,7 +19,7 @@ function App() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%,-50%)",
-                  fontSize: "2rem",
+                  fontSize: "5vw",
                   fontWeight: "600"}}>Please Wait......</div>}
               >
                 <Teachnologies />
@@ -35,7 +35,7 @@ function App() {
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%,-50%)",
-                fontSize: "2rem",
+                fontSize: "5vw",
                 fontWeight: "600"}}>please wait.....</div>}
               >
                 <Protected Component={ContactUs} />
