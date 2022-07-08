@@ -15,7 +15,12 @@ function App() {
             path="/"
             element={
               <Suspense
-                fallback={<div className="lazyLoading">Please Wait......</div>}
+                fallback={<div style={{position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,-50%)",
+                  fontSize: "2rem",
+                  fontWeight: "600"}}>Please Wait......</div>}
               >
                 <Teachnologies />
               </Suspense>
@@ -26,7 +31,12 @@ function App() {
             path="/contactus"
             element={
               <Suspense
-                fallback={<div className="lazyLoading">please wait.....</div>}
+                fallback={<div style={{position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%,-50%)",
+                fontSize: "2rem",
+                fontWeight: "600"}}>please wait.....</div>}
               >
                 <Protected Component={ContactUs} />
               </Suspense>
