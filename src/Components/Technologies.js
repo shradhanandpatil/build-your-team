@@ -145,7 +145,7 @@ const data=getState();
         </div>
       </div>
       <div className="teachnologies">
-        <h2>Backend Teachnologies</h2>
+        <h2>Backend Technologies</h2>
         <div className="backend-container">
           <div className="backend-box">
             <div className="logo java-logo">

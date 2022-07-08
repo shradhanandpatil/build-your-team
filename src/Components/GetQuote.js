@@ -9,7 +9,6 @@ import { toast , ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function GetQuote({ closeModal ,data}) {
-
   const navigate= useNavigate();
   const newData=data
   const stack=[];
@@ -20,7 +19,6 @@ function GetQuote({ closeModal ,data}) {
   const newText=stack.join('|');
 
     const handelPost= async(value,newText)=>{
-      try{
         if(newText===""){
           toast.error('Please Select Technologies', {
             position: "top-right",
@@ -31,6 +29,7 @@ function GetQuote({ closeModal ,data}) {
             progress: undefined,
             });
         }else{
+          // setLoading(true);
           toast.success('Submitted Successfully', {
             position: "top-right",
             autoClose: 700,
@@ -38,20 +37,21 @@ function GetQuote({ closeModal ,data}) {
             closeOnClick: true,
             draggable: true,
             progress: undefined,
-            });
+            });    
        const data={
         "email": `${value.email}`,
         "stack": `${newText}`,
         "phoneNo":`${value.number}`,
         "name":`${value.name}`
         }
-      await axios.post((process.env.REACT_APP_BASE_URL+'/DevStack/Email'),data);
-      localStorage.setItem('done',true);
-      navigate('/contactus');
-    }}catch(err){
-      console.log(err);
-    }
+        
+        await axios.post((process.env.REACT_APP_BASE_URL+'/DevStack/Email'),data)
+        .then(()=>navigate("/contactus"),localStorage.setItem('done',true)).catch((err)=>console.log(err));
+      }
+      closeModal();
+      
 }
+
   const initialValues={
     number:'',
     email:'',
