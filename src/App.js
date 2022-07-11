@@ -5,6 +5,7 @@ const ContactUs = lazy(() => import("./Components/ContactUs"));
 const Teachnologies = lazy(() => import("./Components/Technologies"));
 
 function App() {
+  
   localStorage.clear();
   return (
     <div className="parent_conatiner">

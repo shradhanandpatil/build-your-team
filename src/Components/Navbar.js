@@ -1,6 +1,6 @@
 import React from 'react'
 import "../CSS/style.css"
-import NimapLogo from "../img/nimapLogo (1).png"
+import NimapLogo from "../NewImg/logo.png"
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
