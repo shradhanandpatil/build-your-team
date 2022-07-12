@@ -11,7 +11,10 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 function GetQuote({ closeModal, data }) {
-  const [value, setValue] = useState();
+  const [phone, setPhone] = useState();
+  const [name , setName] = useState('');
+  const [organization , setOrganization] = useState('');
+  const [email , setEmail] = useState('');
   const navigate = useNavigate();
   const newData = data;
   const stack = [];
@@ -21,7 +24,7 @@ function GetQuote({ closeModal, data }) {
   }
   const newText = stack.join("|");
 
-  const handelPost = async (value, newText) => {
+  const handelPost = async (value, newText,phone) => {
     if (newText === "") {
       toast.error("Please Select Technologies", {
         position: "top-right",
@@ -41,10 +44,10 @@ function GetQuote({ closeModal, data }) {
         progress: undefined,
       });
       const data = {
-        email: `${value.email}`,
+        email: `${email}`,
         stack: `${newText}`,
-        phoneNo: `${value.number}`,
-        name: `${value.name}`,
+        phoneNo: `${phone}`,
+        name: `${name}`
       };
 
       await axios
@@ -89,7 +92,7 @@ function GetQuote({ closeModal, data }) {
           <Formik
             initialValues={initialValues}
             validationSchema={validation}
-            onSubmit={(value) => handelPost(value, newText)}
+            
           >
             {({ errors, touched }) => (
               <Form className="form">
@@ -109,18 +112,20 @@ function GetQuote({ closeModal, data }) {
                       marginTop: "1rem",
                       }}
                     placeholder="Enter phone number"
-                    value={value}
-                    onChange={setValue}
+                    value={phone}
+                    onChange={setPhone}
                   />
 
-                {errors.number && touched.number ? (
+                {/* {errors.number && touched.number ? (
                   <div className="error">{errors.number}</div>
-                ) : null}
+                ) : null} */}
                 <Field
                   className="input"
                   name="email"
                   placeholder="Enter your email"
                   type="email"
+                  value={email}
+                  onChange={(e)=>setEmail((e.target.value))}
                 />
                 {errors.email && touched.email ? (
                   <div className="error">{errors.email}</div>
@@ -131,17 +136,21 @@ function GetQuote({ closeModal, data }) {
                   name="name"
                   placeholder="Enter full name  "
                   type="text"
+                  value={name}
+                  onChange={(e)=>setName((e.target.name))}
                 />
                 <Field
                   className="input"
                   name="organization"
                   placeholder="Enter your organization name"
                   type="text"
+                  value={organization}
+                  onChange={(e)=>setOrganization((e.target.organization))}
                 />
                 {errors.name && touched.name ? (
                   <div className="error">{errors.name}</div>
                 ) : null}
-                <button type="submit" className="form-btn grad">
+                <button type="button" onClike={() => handelPost(newText,phone,name,organization,email)} className="form-btn grad">
                   Done
                 </button>
               </Form>
