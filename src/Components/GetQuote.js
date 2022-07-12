@@ -10,11 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
-function GetQuote({ closeModal, data }) {
+function GetQuote({ closeModal, data}) {
   const [phone, setPhone] = useState();
-  const [name , setName] = useState('');
-  const [organization , setOrganization] = useState('');
-  const [email , setEmail] = useState('');
+  // const [fullName , setFullName] = useState('');
+  // const [organization , setOrganization] = useState('');
+  // const [email , setEmail] = useState('');
   const navigate = useNavigate();
   const newData = data;
   const stack = [];
@@ -24,7 +24,7 @@ function GetQuote({ closeModal, data }) {
   }
   const newText = stack.join("|");
 
-  const handelPost = async (value, newText,phone) => {
+  const handelPost = async (value,phone,newText) => {
     if (newText === "") {
       toast.error("Please Select Technologies", {
         position: "top-right",
@@ -44,10 +44,11 @@ function GetQuote({ closeModal, data }) {
         progress: undefined,
       });
       const data = {
-        email: `${email}`,
-        stack: `${newText}`,
-        phoneNo: `${phone}`,
-        name: `${name}`
+        email: value.email,
+        stack: newText,
+        phoneNo: phone,
+        name: value.name,
+        organization:value.organization
       };
 
       await axios
@@ -66,12 +67,14 @@ function GetQuote({ closeModal, data }) {
   };
 
   const validation = Yup.object({
-    number: Yup.string()
-      .typeError("Please Enter Valid Contact Number")
-      .matches(/^[0-9]{10}$/, "Invalid mobile number")
-      .required("Mobile number is required"),
+    // number: Yup.string()
+    //   .typeError("Please Enter Valid Contact Number")
+    //   .matches(/^[0-9]{10}$/, "Invalid mobile number")
+    //   .required("Mobile number is required"),
 
-    email: Yup.string().email("Email is invalid").required("Required"),
+    email: Yup.string()
+              .email("Email is invalid")
+              .required("Required"),
 
     name: Yup.string()
       .min(2, " name is must be more then 2 characters")
@@ -92,7 +95,10 @@ function GetQuote({ closeModal, data }) {
           <Formik
             initialValues={initialValues}
             validationSchema={validation}
-            
+            onSubmit={(value)=>{
+              console.log(value);
+              handelPost(value,phone,newText)
+            }}
           >
             {({ errors, touched }) => (
               <Form className="form">
@@ -114,8 +120,8 @@ function GetQuote({ closeModal, data }) {
                     placeholder="Enter phone number"
                     value={phone}
                     onChange={setPhone}
+                    rules={{ required: true }}            
                   />
-
                 {/* {errors.number && touched.number ? (
                   <div className="error">{errors.number}</div>
                 ) : null} */}
@@ -124,8 +130,8 @@ function GetQuote({ closeModal, data }) {
                   name="email"
                   placeholder="Enter your email"
                   type="email"
-                  value={email}
-                  onChange={(e)=>setEmail((e.target.value))}
+                  // value={email}
+                  // onChange={(e)=>setEmail((e.target.value))}
                 />
                 {errors.email && touched.email ? (
                   <div className="error">{errors.email}</div>
@@ -133,24 +139,27 @@ function GetQuote({ closeModal, data }) {
 
                 <Field
                   className="input"
-                  name="name"
                   placeholder="Enter full name  "
+                  name="name"
                   type="text"
-                  value={name}
-                  onChange={(e)=>setName((e.target.name))}
+                  // value={fullName}
+                  // onChange={(e)=>setFullName((e.target.value))}
                 />
+                {errors.name && touched.name ? (
+                  <div className="error">{errors.name}</div>
+                ) : null}
                 <Field
                   className="input"
                   name="organization"
                   placeholder="Enter your organization name"
                   type="text"
-                  value={organization}
-                  onChange={(e)=>setOrganization((e.target.organization))}
+                  // value={organization}
+                  // onChange={(e)=>setOrganization((e.target.value))}
                 />
-                {errors.name && touched.name ? (
-                  <div className="error">{errors.name}</div>
+                {errors.organization && touched.organization ? (
+                  <div className="error">{errors.organization}</div>
                 ) : null}
-                <button type="button" onClike={() => handelPost(newText,phone,name,organization,email)} className="form-btn grad">
+                <button type="submit" className="form-btn grad">
                   Done
                 </button>
               </Form>
